@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="versionName"
             type="java.lang.String" />
@@ -22,7 +21,7 @@
             app:animatedSvgFillColors="@array/google_glyph_colors"
             app:animatedSvgFillStart="1200"
             app:animatedSvgFillTime="1000"
-            app:animatedSvgGlyphStrings="@array/hplc_glyph_strings"
+            app:animatedSvgGlyphStrings="@array/google_glyph_strings"
             app:animatedSvgTraceMarkerLength="50"
             app:animatedSvgTraceTime="2000"
             app:animatedSvgTraceTimePerGlyph="1000" />

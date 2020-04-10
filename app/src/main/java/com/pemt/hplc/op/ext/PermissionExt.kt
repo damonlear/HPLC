@@ -8,6 +8,7 @@ import com.pemt.hplc.op.ext.otherwise
 import com.pemt.hplc.op.ext.yes
 
 //拓展Assent动态申请权限
+//申请权限
 fun Activity.runWithPermissions(
     vararg permissions: Permission,
     requestCode: Int = 40,
