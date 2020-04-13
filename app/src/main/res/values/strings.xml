@@ -5,6 +5,12 @@
         <item>Repos</item>
         <item>Favor</item>
     </string-array>
+
+    <string name="label_welcome">欢迎界面</string>
+    <string name="label_login">登陆界面</string>
+    <string name="label_main">主界面</string>
+
+
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="go_to_login">Sign in</string>

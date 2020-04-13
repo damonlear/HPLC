@@ -10,9 +10,9 @@ import com.pemt.hplc.op.data.http.interceptor.AuthorizationInterceptor
 //import com.pemt.hplc.op.repos.api.ReposApi
 //import com.pemt.hplc.op.repos.repository.ReposRepository
 //import com.pemt.hplc.op.repos.viewmodel.ReposViewModel
-//import com.pemt.hplc.op.user.api.UserApi
-//import com.pemt.hplc.op.user.repository.UserRepository
-//import com.pemt.hplc.op.user.viewmodel.UserViewModel
+import com.pemt.hplc.op.user.api.UserApi
+import com.pemt.hplc.op.user.repository.UserRepository
+import com.pemt.hplc.op.user.viewmodel.UserViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -29,12 +29,15 @@ private const val TAG = "fmt"
 val viewModelModule = module {
 //    viewModel { HomeViewModel(get()) }
 //    viewModel { ReposViewModel(get()) }
-//    viewModel { UserViewModel(get()) }
+    viewModel {
+        UserViewModel()
+//        UserViewModel(get())
+    }
 }
 
 val reposModule = module {
 //    factory { ReposRepository(get()) }
-//    factory { UserRepository(get(), get()) }
+    factory { UserRepository(get(), get()) }
 }
 
 val remoteModule = module {
@@ -71,7 +74,7 @@ val remoteModule = module {
 
 //    single<ReposApi> { get<Retrofit>().create(ReposApi::class.java) }
 //
-//    single<UserApi> { get<Retrofit>().create(UserApi::class.java) }
+    single<UserApi> { get<Retrofit>().create(UserApi::class.java) }
 }
 
 val localModule = module {

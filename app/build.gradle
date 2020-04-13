@@ -81,7 +81,8 @@ dependencies {
     implementation 'com.afollestad:assent:2.3.1'
 
     //第三方控件
-//    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    //登陆界面的圆形头像
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
 //    implementation 'com.just.agentweb:agentweb:4.0.3-beta'
 //    implementation project(path: ':simplebehavior')
     //图片处理

@@ -1,7 +1,6 @@
 package com.pemt.hplc.op.ui.welcome
 
 //import com.fmt.github.home.activity.HomeActivity
-//import com.fmt.github.user.activity.LoginActivity
 
 import android.content.Intent
 import androidx.lifecycle.lifecycleScope
@@ -16,6 +15,7 @@ import com.pemt.hplc.op.ext.getVersionName
 import com.pemt.hplc.op.ext.otherwise
 import com.pemt.hplc.op.ext.runWithPermissions
 import com.pemt.hplc.op.ext.yes
+import com.pemt.hplc.op.ui.login.LoginActivity
 import com.pemt.hplc.op.user.dao.UserDao
 import kotlinx.android.synthetic.main.activity_welcome.*
 import kotlinx.coroutines.delay
@@ -59,7 +59,7 @@ class WelcomeActivity : BaseDataBindActivity<ActivityWelcomeBinding>() {
             delay(500)//挂起,但不会阻塞,后续通过resumeWith恢复执行
             val userList = mUserDao.getAll()
             (userList.isEmpty()).yes {
-//                go2Activity(LoginActivity::class.java)
+                go2Activity(LoginActivity::class.java)
             }.otherwise {
 //                go2Activity(HomeActivity::class.java)
             }
