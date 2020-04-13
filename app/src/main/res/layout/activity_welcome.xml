@@ -39,6 +39,5 @@
             android:textColor="@color/version_text_color"
             android:textSize="12sp" />
 
-
     </FrameLayout>
 </layout>
